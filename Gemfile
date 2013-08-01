@@ -45,6 +45,9 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'devise'
+
+gem 'binding_of_caller'
 gem 'better_errors'
 gem 'pry'
 gem 'guard'

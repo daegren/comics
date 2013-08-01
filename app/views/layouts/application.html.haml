@@ -16,5 +16,6 @@
             %ul.nav
               %li.active
                 =link_to "Home", :root
-    .row
-      =yield
+            %ul.nav.pull-right
+              = render partial: 'login'
+    =yield
