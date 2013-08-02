@@ -1,4 +1,11 @@
 -if current_user
-  %li=link_to 'Sign Out', destroy_user_session_path
+  %li.dropdown
+    %a.dropdown-toggle{data: {toggle: 'dropdown'}}
+      .avatar
+      Welcome
+      = current_user.email
+      %b.caret
+    %ul.dropdown-menu
+      %li=link_to 'Sign Out', destroy_user_session_path
 -else
   %li=link_to 'Sign in', new_user_session_path
