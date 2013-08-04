@@ -46,11 +46,14 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise'
-gem 'quiet_assets'
+gem 'carrierwave'
 
-gem 'binding_of_caller'
-gem 'better_errors'
-gem 'pry'
-gem 'pry-remote'
-gem 'guard'
-gem 'guard-livereload'
+group :development do
+  gem 'quiet_assets'
+  gem 'binding_of_caller'
+  gem 'better_errors'
+  gem 'pry'
+  gem 'pry-remote'
+  gem 'guard'
+  gem 'guard-livereload'
+end

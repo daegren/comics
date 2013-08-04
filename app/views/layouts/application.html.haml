@@ -16,6 +16,8 @@
             %ul.nav
               %li.active
                 =link_to "Home", :root
+              %li
+                =link_to "Comics", comics_path
             %ul.nav.pull-right
               = render partial: 'login'
     =yield
