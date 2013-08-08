@@ -1,3 +1,5 @@
 .comic
   .preview
-    =comic.firstPage
+    =image_tag src: comic.cover_page.current_path
+  .title
+    =link_to comic.title, comic

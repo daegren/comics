@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130804224803) do
+ActiveRecord::Schema.define(version: 20130808005411) do
 
   create_table "comics", force: true do |t|
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
+    t.string   "cover_page"
   end
 
   create_table "pages", force: true do |t|

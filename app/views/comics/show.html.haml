@@ -1,0 +1,5 @@
+%h2=@comic.title
+
+- @comic.pages.each do |page|
+  .page-preview
+    =image_tag src: page.page_image.current_path

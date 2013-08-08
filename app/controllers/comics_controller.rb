@@ -2,6 +2,10 @@ class ComicsController < ApplicationController
 
   def index
     @comics = Comic.all
-    @newest_comics = Comic.newest
+    @newest = Comic.newest
+  end
+
+  def show
+    @comic = Comic.find(params[:id])
   end
 end

@@ -13,19 +13,20 @@ user.save!
 
 harley = Comic.create({
   title: 'New 52: Harley #1',
-  author: user
+  author: user,
+  cover_page: 'assets/seeds/harley1.jpg'
 })
 harley.pages.create({
   title: 'Cover Page',
   page_image: 'assets/seeds/harley1.jpg'
 })
-harley.first_page = harley.pages.first
 
 harley.save!
 
 flash = Comic.create({
   title: 'New 52: Flash #1',
-  author: user
+  author: user,
+  cover_page: 'assets/seeds/flash1.jpg'
 })
 flash.pages.create({
   title: 'Cover Page',
