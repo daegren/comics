@@ -8,6 +8,10 @@ Comics::Application.routes.draw do
 
   resources :comics, only: [:index, :show]
 
+  namespace :my do
+    resources :comics
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
