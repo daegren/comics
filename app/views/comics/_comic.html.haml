@@ -1,5 +1,5 @@
 .comic
   .preview
-    =image_tag src: comic.cover_page.current_path
+    =image_tag comic.cover_page.url, size: '250x100'
   .title
     =link_to comic.title, comic
