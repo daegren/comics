@@ -13,8 +13,9 @@
       .navbar-inner
         .container
           .nav-collapse.collapse
-            .brand
-              Comics
+            =link_to root_path do
+              .brand
+                Comics
             %ul.nav
               %li.active
                 =link_to "Home", :root
