@@ -17,3 +17,6 @@
 
 # Ignore public folder
 /public
+
+# Sass cache
+.sass-cache
