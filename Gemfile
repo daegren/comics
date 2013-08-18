@@ -51,6 +51,7 @@ end
 
 gem 'devise'
 gem 'carrierwave'
+gem 'unicorn'
 
 group :production do
   gem 'rails_12factor'
