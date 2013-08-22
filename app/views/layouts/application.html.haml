@@ -3,24 +3,33 @@
   %head
     %title Comics
     =stylesheet_link_tag    "application", params[:controller],  media: "all", "data-turbolinks-track" => true
-    =javascript_include_tag "application", "data-turbolinks-track" => true
     =csrf_meta_tags
+    %meta{name: 'viewport', content: "width=device-width, initial-scale=1.0"}
 
   %body
 
-  .container
-    .navbar
-      .navbar-inner
-        .container
-          .nav-collapse.collapse
-            =link_to root_path do
-              .brand
-                Comics
-            %ul.nav
-              %li.active
-                =link_to "Home", :root
-              %li
-                =link_to "Comics", comics_path
-            %ul.nav.pull-right
-              = render partial: 'login'
-    =yield
+
+    .container
+      /navigation
+      .navbar.navbar-default{role: "navigation"}
+        .navbar-header
+          %button.navbar-toggle{type: "button", data: {toggle: "collapse"}}
+            %span.sr-only
+              Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          =link_to root_path do
+            .navbar-brand
+              Comics
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-left
+            %li
+              =link_to "Comics", comics_path
+          %ul.nav.navbar-nav.navbar-right
+            =render partial: 'login'
+      / page content
+      =yield
+
+    / scripts
+    =javascript_include_tag "application", "data-turbolinks-track" => true

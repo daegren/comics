@@ -2,9 +2,9 @@
   %li.dropdown
     %a.dropdown-toggle{data: {toggle: 'dropdown'}}
       .avatar
-      Welcome
-      = current_user.email
-      %b.caret
+        Welcome
+        = current_user.email
+        %b.caret
     %ul.dropdown-menu
       %li=link_to 'My Comics', my_comics_path
       %li=link_to 'Sign Out', destroy_user_session_path, method: :delete
